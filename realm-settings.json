@@ -1,0 +1,21 @@
+{
+  "realm": "katalon",
+  "enabled": true,
+  "registrationAllowed": true,
+  "registrationEmailAsUsername": true,
+  "requiredCredentials": [
+    "password"
+  ],
+  "loginTheme": "katalon",
+  "requiredActions": [
+    {
+      "alias": "webauthn-register-passwordless",
+      "name": "Webauthn Register Passwordless",
+      "providerId": "webauthn-register-passwordless",
+      "enabled": true,
+      "defaultAction": true,
+      "priority": 80,
+      "config": {}
+    }
+  ]
+}

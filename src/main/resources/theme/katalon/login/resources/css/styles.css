@@ -1,0 +1,321 @@
+/* Custom styles for Katalon Keycloak theme - Bootstrap 5 compatible */
+
+:root {
+    --kc-primary-color: #0066cc;
+    --kc-primary-hover-color: #0056b3;
+    --kc-bg-color: #f8f9fa;
+    --kc-card-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --kc-border-radius: 0.5rem;
+}
+
+body {
+    background-color: var(--kc-bg-color);
+    font-family: var(--bs-body-font-family);
+}
+
+/* Header layout fixes */
+.logo-container {
+    display: block;
+    margin-bottom: 1rem !important;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.header-title {
+    display: block;
+    clear: both;
+    width: 100%;
+}
+
+.header-title h1,
+.header-title h2,
+.header-title h3,
+.header-title h4 {
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #212529;
+}
+
+/* Card improvements */
+.card {
+    border-radius: var(--kc-border-radius);
+    border: none;
+    box-shadow: var(--kc-card-shadow);
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: var(--kc-primary-color);
+    border-color: var(--kc-primary-color);
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--kc-primary-hover-color);
+    border-color: var(--kc-primary-hover-color);
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 102, 204, 0.25);
+}
+
+.btn-outline-secondary {
+    border-color: #dee2e6;
+    color: #6c757d;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    color: #495057;
+}
+
+/* Form controls */
+.form-control {
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: var(--kc-primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 102, 204, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+/* Form validation */
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Alert improvements */
+.alert {
+    border-radius: 0.375rem;
+    border: none;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-success {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Social login providers */
+.social-providers-section {
+    margin-top: 1.5rem;
+}
+
+.social-providers-list {
+    margin: 0;
+    padding: 0;
+}
+
+.social-provider-list-item {
+    margin-bottom: 0.75rem;
+}
+
+.social-provider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+}
+
+.social-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.social-provider-name {
+    flex: 1;
+}
+
+/* Grid layout for multiple providers */
+.social-providers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+}
+
+.social-provider-grid-item {
+    margin: 0;
+}
+
+/* Checkbox and radio styles */
+.form-check-input:checked {
+    background-color: var(--kc-primary-color);
+    border-color: var(--kc-primary-color);
+}
+
+.form-check-input:focus {
+    border-color: var(--kc-primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 102, 204, 0.25);
+}
+
+/* Link styling */
+a {
+    color: var(--kc-primary-color);
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+    color: var(--kc-primary-hover-color);
+    text-decoration: underline;
+}
+
+/* Input wrapper for field components */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper.is-invalid {
+    border-color: #dc3545;
+}
+
+/* Password visibility button */
+.password-visibility-btn {
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Login footer for social providers */
+.login-footer-band {
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.login-footer-helper-text {
+    color: #6c757d;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Passkey/WebAuthn authentication */
+#authenticateWebAuthnButton {
+    transition: all 0.15s ease-in-out;
+    position: relative;
+}
+
+#authenticateWebAuthnButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 102, 204, 0.25);
+}
+
+#authenticateWebAuthnButton:disabled {
+    transform: none;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+#authenticateWebAuthnButton svg {
+    vertical-align: middle;
+}
+
+/* Divider styling for "or" separator */
+.text-muted {
+    position: relative;
+}
+
+.text-muted::before,
+.text-muted::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    background-color: #dee2e6;
+}
+
+.text-muted::before {
+    right: 100%;
+    margin-right: 1rem;
+}
+
+.text-muted::after {
+    left: 100%;
+    margin-left: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .social-providers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .logo {
+        height: 50px !important;
+    }
+}
